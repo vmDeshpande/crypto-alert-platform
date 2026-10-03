@@ -117,7 +117,7 @@ docker compose exec postgres \
 ## Self-hosted Node
 
 ```bash
-git clone https://github.com/<owner>/crypto-sentinel.git
+git clone https://github.com/vmDeshpande/crypto-sentinel.git
 cd crypto-sentinel
 npm ci
 npm run build

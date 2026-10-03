@@ -48,7 +48,7 @@ pushes the result to Discord, Telegram or any webhook.
 Delta Exchange API key.
 
 ```bash
-git clone https://github.com/<owner>/crypto-sentinel.git
+git clone https://github.com/vmDeshpande/crypto-sentinel.git
 cd crypto-sentinel
 npm install
 cp .env.example .env.local     # fill in DATABASE_URL, ALERT_API_KEY, ENCRYPTION_KEY

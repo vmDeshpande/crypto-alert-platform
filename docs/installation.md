@@ -14,7 +14,7 @@ You do **not** need exchange credentials to install or to explore the UI.
 ## 1. Install
 
 ```bash
-git clone https://github.com/<owner>/crypto-sentinel.git
+git clone https://github.com/vmDeshpande/crypto-sentinel.git
 cd crypto-sentinel
 npm install
 ```
