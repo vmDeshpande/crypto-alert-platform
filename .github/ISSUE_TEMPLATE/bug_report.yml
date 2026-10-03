@@ -1,0 +1,84 @@
+name: Bug report
+description: Something behaves differently from what the documentation says
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not report security vulnerabilities here — use the private
+        advisory form linked in SECURITY.md.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you observed, including any error message
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Commands, URLs or UI steps that trigger it
+      placeholder: |
+        1. Create an alert with condition `price_below`
+        2. Run `curl -X POST http://localhost:3000/api/alerts/evaluate ...`
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: health
+    attributes:
+      label: Health check output
+      description: Output of `curl -s http://localhost:3000/api/system/health`
+      render: json
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log lines
+      description: Server output prefixed with `[crypto-sentinel]`
+
+  - type: input
+    id: version
+    attributes:
+      label: Commit or release
+      placeholder: v1.0.0 or a commit SHA
+
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment
+      options:
+        - Local development
+        - Docker / Docker Compose
+        - Vercel
+        - Self-hosted Node
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      placeholder: v20.11.0
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-flight
+      options:
+        - label: I have searched existing issues for this
+          required: true
+        - label: I read docs/troubleshooting.md
+          required: false
